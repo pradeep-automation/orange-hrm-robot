@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20231010 19:33:07.674" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Development\robot-scripts\orange-hrm-robot\Tests">
+<suite id="s1-s1" name="Test Dashboard" source="C:\Development\robot-scripts\orange-hrm-robot\Tests\test_dashboard.robot">
+<test id="s1-s1-t1" name="Validate the Dashboard page" line="11">
+<kw name="Go to Landing Page" library="LoginPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231010 19:33:08.174" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20231010 19:33:08.174" endtime="20231010 19:33:19.042"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231010 19:33:19.042" endtime="20231010 19:33:19.194"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231010 19:33:19.194" endtime="20231010 19:33:19.194"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:08.174" endtime="20231010 19:33:19.194"/>
+</kw>
+<kw name="Login to the website" library="LoginPage">
+<arg>Admin</arg>
+<arg>admin123</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:19.194" level="INFO">Typing text 'Admin' into text field 'username'.</msg>
+<status status="PASS" starttime="20231010 19:33:19.194" endtime="20231010 19:33:20.195"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:20.210" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231010 19:33:20.279" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231010 19:33:20.442" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231010 19:33:20.195" endtime="20231010 19:33:20.442"/>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:20.442" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20231010 19:33:20.442" endtime="20231010 19:33:20.505"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:19.194" endtime="20231010 19:33:20.505"/>
+</kw>
+<kw name="check the collapse expand button" library="DashboardPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_menu_collapse_css}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:20.505" level="INFO">Clicking button 'css:.oxd-main-menu-search&gt;.oxd-icon-button'.</msg>
+<status status="PASS" starttime="20231010 19:33:20.505" endtime="20231010 19:33:22.289"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:23.293" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231010 19:33:22.289" endtime="20231010 19:33:23.293"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_menu_collapse_css}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:23.293" level="INFO">Clicking button 'css:.oxd-main-menu-search&gt;.oxd-icon-button'.</msg>
+<status status="PASS" starttime="20231010 19:33:23.293" endtime="20231010 19:33:23.494"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:25.495" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231010 19:33:23.494" endtime="20231010 19:33:25.495"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:20.505" endtime="20231010 19:33:25.495"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:08.174" endtime="20231010 19:33:25.495"/>
+</test>
+<test id="s1-s1-t2" name="Validate the menus in Dashboard page" line="16">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231010 19:33:25.532" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20231010 19:33:25.500" endtime="20231010 19:33:25.532"/>
+</kw>
+<kw name="Get The Dashboard Menu Items" library="Dashboard">
+<arg>${links_menu_css}</arg>
+<status status="PASS" starttime="20231010 19:33:25.532" endtime="20231010 19:33:25.883"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:25.495" endtime="20231010 19:33:25.883"/>
+</test>
+<test id="s1-s1-t3" name="add employee in the website" line="20">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${links_menu_css}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231010 19:33:25.883" endtime="20231010 19:33:25.905"/>
+</kw>
+<kw name="Click On Dashboard Menu Item" library="Dashboard">
+<arg>${links_menu_css}</arg>
+<arg>PIM</arg>
+<msg timestamp="20231010 19:33:25.983" level="INFO">Clicking element 'xpath:(//ul[@class='oxd-main-menu']/li)[2]'.</msg>
+<status status="PASS" starttime="20231010 19:33:25.905" endtime="20231010 19:33:26.973"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:28.973" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231010 19:33:26.973" endtime="20231010 19:33:28.973"/>
+</kw>
+<kw name="adding new employee in the website" library="DashboardPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:(//a[@class='oxd-topbar-body-nav-tab-item'])[2]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:28.973" level="INFO">Clicking link 'xpath:(//a[@class='oxd-topbar-body-nav-tab-item'])[2]'.</msg>
+<status status="PASS" starttime="20231010 19:33:28.973" endtime="20231010 19:33:29.542"/>
+</kw>
+<kw name="provide new employee details" library="DashboardPage">
+<arg>Rock</arg>
+<arg>The</arg>
+<arg>Lesnar</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>firstName</arg>
+<arg>${first}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:29.542" level="INFO">Typing text 'Rock' into text field 'firstName'.</msg>
+<status status="PASS" starttime="20231010 19:33:29.542" endtime="20231010 19:33:30.209"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>middleName</arg>
+<arg>${middle}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:30.220" level="INFO">Typing text 'The' into text field 'middleName'.</msg>
+<status status="PASS" starttime="20231010 19:33:30.209" endtime="20231010 19:33:30.464"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>lastName</arg>
+<arg>${last}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:30.470" level="INFO">Typing text 'Lesnar' into text field 'lastName'.</msg>
+<status status="PASS" starttime="20231010 19:33:30.464" endtime="20231010 19:33:30.737"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:30.737" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231010 19:33:30.737" endtime="20231010 19:33:30.941"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:29.542" endtime="20231010 19:33:30.941"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:28.973" endtime="20231010 19:33:30.941"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:33.942" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231010 19:33:30.941" endtime="20231010 19:33:33.942"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:25.883" endtime="20231010 19:33:33.942"/>
+</test>
+<test id="s1-s1-t4" name="Add role to the employee in the website" line="28">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${links_menu_css}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231010 19:33:33.942" endtime="20231010 19:33:34.889"/>
+</kw>
+<kw name="Click On Dashboard Menu Item" library="Dashboard">
+<arg>${links_menu_css}</arg>
+<arg>Admin</arg>
+<msg timestamp="20231010 19:33:34.963" level="INFO">Clicking element 'xpath:(//ul[@class='oxd-main-menu']/li)[1]'.</msg>
+<status status="PASS" starttime="20231010 19:33:34.889" endtime="20231010 19:33:36.154"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:38.162" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231010 19:33:36.162" endtime="20231010 19:33:38.162"/>
+</kw>
+<kw name="adding user role in the website" library="DashboardPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button/i[contains(@class,'bi-plus')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:38.162" level="INFO">Clicking element 'xpath://button/i[contains(@class,'bi-plus')]'.</msg>
+<status status="PASS" starttime="20231010 19:33:38.162" endtime="20231010 19:33:38.725"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Add User</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231010 19:33:38.725" endtime="20231010 19:33:39.112"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='oxd-select-text-input'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:39.117" level="INFO">Clicking element 'xpath:(//div[@class='oxd-select-text-input'])[1]'.</msg>
+<status status="PASS" starttime="20231010 19:33:39.117" endtime="20231010 19:33:39.286"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://div[@role='listbox']//span[text()='Admin']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:39.286" level="INFO">Clicking element 'xpath://div[@role='listbox']//span[text()='Admin']'.</msg>
+<status status="PASS" starttime="20231010 19:33:39.286" endtime="20231010 19:33:39.396"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${empolyeename_xpath}</arg>
+<arg>Rock</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:39.396" level="INFO">Typing text 'Rock' into text field 'xpath://div[@class='oxd-autocomplete-wrapper']//input'.</msg>
+<status status="PASS" starttime="20231010 19:33:39.396" endtime="20231010 19:33:39.591"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:41.592" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231010 19:33:39.591" endtime="20231010 19:33:41.592"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${empolyeename_xpath}</arg>
+<arg>ARROW_DOWN</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231010 19:33:41.592" level="INFO">Sending key(s) ('ARROW_DOWN', 'ENTER') to xpath://div[@class='oxd-autocomplete-wrapper']//input element.</msg>
+<msg timestamp="20231010 19:33:41.898" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg timestamp="20231010 19:33:41.898" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<msg timestamp="20231010 19:33:41.927" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20231010 19:33:41.927" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231010 19:33:41.592" endtime="20231010 19:33:41.954"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='oxd-select-text-input'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:41.954" level="INFO">Clicking element 'xpath:(//div[@class='oxd-select-text-input'])[2]'.</msg>
+<status status="PASS" starttime="20231010 19:33:41.954" endtime="20231010 19:33:42.074"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://div[@role='listbox']//span[text()='Enabled']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:42.074" level="INFO">Clicking element 'xpath://div[@role='listbox']//span[text()='Enabled']'.</msg>
+<status status="PASS" starttime="20231010 19:33:42.074" endtime="20231010 19:33:42.183"/>
+</kw>
+<kw name="generate random user name" library="DashboardPage">
+<var>${user_name}</var>
+<kw name="Generate Random String" library="String">
+<var>${user}</var>
+<arg>8</arg>
+<arg>[UPPER][LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20231010 19:33:42.183" level="INFO">${user} = JCTauogu</msg>
+<status status="PASS" starttime="20231010 19:33:42.183" endtime="20231010 19:33:42.183"/>
+</kw>
+<msg timestamp="20231010 19:33:42.183" level="INFO">${user_name} = JCTauogu</msg>
+<status status="PASS" starttime="20231010 19:33:42.183" endtime="20231010 19:33:42.183"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='oxd-form-row']//input)[2]</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:42.183" level="INFO">Typing text 'JCTauogu' into text field 'xpath:(//div[@class='oxd-form-row']//input)[2]'.</msg>
+<status status="PASS" starttime="20231010 19:33:42.183" endtime="20231010 19:33:42.399"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${user_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20231010 19:33:42.399" level="INFO">${user_name} = JCTauogu</msg>
+<status status="PASS" starttime="20231010 19:33:42.399" endtime="20231010 19:33:42.399"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:44.402" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231010 19:33:42.399" endtime="20231010 19:33:44.402"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:(//div[contains(@class,'user-password-row')]//input)[1]</arg>
+<arg>Secret123456</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:44.402" level="INFO">Typing password into text field 'xpath:(//div[contains(@class,'user-password-row')]//input)[1]'.</msg>
+<msg timestamp="20231010 19:33:44.490" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231010 19:33:44.642" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231010 19:33:44.402" endtime="20231010 19:33:44.642"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:(//div[contains(@class,'user-password-row')]//input)[2]</arg>
+<arg>Secret123456</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:44.642" level="INFO">Typing password into text field 'xpath:(//div[contains(@class,'user-password-row')]//input)[2]'.</msg>
+<msg timestamp="20231010 19:33:44.714" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231010 19:33:44.874" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231010 19:33:44.642" endtime="20231010 19:33:44.874"/>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:44.874" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20231010 19:33:44.874" endtime="20231010 19:33:44.906"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:49.906" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231010 19:33:44.906" endtime="20231010 19:33:49.906"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:38.162" endtime="20231010 19:33:49.906"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:33.942" endtime="20231010 19:33:49.906"/>
+</test>
+<test id="s1-s1-t5" name="Search User in the Website" line="35">
+<kw name="searching user in the website" library="DashboardPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://li/span[text()="User Management "]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:49.921" level="INFO">Clicking element 'xpath://li/span[text()="User Management "]'.</msg>
+<status status="PASS" starttime="20231010 19:33:49.921" endtime="20231010 19:33:50.063"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@role='menuitem']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:50.063" level="INFO">Clicking element 'xpath://a[@role='menuitem']'.</msg>
+<status status="PASS" starttime="20231010 19:33:50.063" endtime="20231010 19:33:50.609"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:.oxd-form-row .oxd-input</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:50.609" level="INFO">Typing text 'JCTauogu' into text field 'css:.oxd-form-row .oxd-input'.</msg>
+<status status="PASS" starttime="20231010 19:33:50.609" endtime="20231010 19:33:51.263"/>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:51.263" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20231010 19:33:51.263" endtime="20231010 19:33:51.321"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Rock Lesnar</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231010 19:33:51.329" endtime="20231010 19:33:51.448"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:49.921" endtime="20231010 19:33:51.448"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>../screenshots/userFound.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231010 19:33:51.714" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/userFound.png"&gt;&lt;img src="../screenshots/userFound.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231010 19:33:51.448" endtime="20231010 19:33:51.714"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:49.921" endtime="20231010 19:33:51.722"/>
+</test>
+<test id="s1-s1-t6" name="Delete a user from the Website" line="39">
+<kw name="deleting user from the website" library="DashboardPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://li/span[text()="User Management "]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:51.722" level="INFO">Clicking element 'xpath://li/span[text()="User Management "]'.</msg>
+<status status="PASS" starttime="20231010 19:33:51.722" endtime="20231010 19:33:51.832"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@role='menuitem']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:51.832" level="INFO">Clicking element 'xpath://a[@role='menuitem']'.</msg>
+<status status="PASS" starttime="20231010 19:33:51.832" endtime="20231010 19:33:52.417"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//input[@type="checkbox"])[5]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231010 19:33:52.417" endtime="20231010 19:33:53.543"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 19:33:56.544" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231010 19:33:53.543" endtime="20231010 19:33:56.544"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>../screenshots/beforedelete.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231010 19:33:56.748" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/beforedelete.png"&gt;&lt;img src="../screenshots/beforedelete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231010 19:33:56.544" endtime="20231010 19:33:56.748"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//input[@type="checkbox"])[5]/following-sibling::span/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:56.748" level="INFO">Clicking element 'xpath:(//input[@type="checkbox"])[5]/following-sibling::span/i'.</msg>
+<status status="PASS" starttime="20231010 19:33:56.748" endtime="20231010 19:33:56.873"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[text()=' Delete Selected ']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:56.873" level="INFO">Clicking button 'xpath://button[text()=' Delete Selected ']'.</msg>
+<status status="PASS" starttime="20231010 19:33:56.873" endtime="20231010 19:33:57.049"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:(//div[@class='orangehrm-modal-footer']/button)[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231010 19:33:57.049" level="INFO">Clicking button 'xpath:(//div[@class='orangehrm-modal-footer']/button)[2]'.</msg>
+<status status="PASS" starttime="20231010 19:33:57.049" endtime="20231010 19:33:57.302"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>css:.oxd-table-body</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231010 19:33:57.302" endtime="20231010 19:34:00.616"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//input[@type="checkbox"])[5]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231010 19:34:00.616" endtime="20231010 19:34:00.934"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>../screenshots/afterdelete.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231010 19:34:01.152" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/afterdelete.png"&gt;&lt;img src="../screenshots/afterdelete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231010 19:34:00.934" endtime="20231010 19:34:01.152"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:51.722" endtime="20231010 19:34:01.152"/>
+</kw>
+<status status="PASS" starttime="20231010 19:33:51.722" endtime="20231010 19:34:01.162"/>
+</test>
+<status status="PASS" starttime="20231010 19:33:07.710" endtime="20231010 19:34:01.162"/>
+</suite>
+<suite id="s1-s2" name="Test Login" source="C:\Development\robot-scripts\orange-hrm-robot\Tests\test_login.robot">
+<test id="s1-s2-t1" name="Login to the orangehrm" line="7">
+<kw name="Go to Landing Page" library="LoginPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231010 19:34:01.178" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20231010 19:34:01.178" endtime="20231010 19:34:07.041"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231010 19:34:07.041" endtime="20231010 19:34:07.179"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231010 19:34:07.179" endtime="20231010 19:34:07.179"/>
+</kw>
+<status status="PASS" starttime="20231010 19:34:01.178" endtime="20231010 19:34:07.179"/>
+</kw>
+<kw name="Login to the website" library="LoginPage">
+<arg>Admin</arg>
+<arg>admin123</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:34:07.179" level="INFO">Typing text 'Admin' into text field 'username'.</msg>
+<status status="PASS" starttime="20231010 19:34:07.179" endtime="20231010 19:34:07.791"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 19:34:07.791" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231010 19:34:07.860" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231010 19:34:08.007" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231010 19:34:07.791" endtime="20231010 19:34:08.007"/>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20231010 19:34:08.007" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20231010 19:34:08.007" endtime="20231010 19:34:08.106"/>
+</kw>
+<status status="PASS" starttime="20231010 19:34:07.179" endtime="20231010 19:34:08.106"/>
+</kw>
+<kw name="Validate if Dashboard page is visible" library="DashboardPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231010 19:34:09.804" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20231010 19:34:08.122" endtime="20231010 19:34:09.804"/>
+</kw>
+<status status="PASS" starttime="20231010 19:34:08.122" endtime="20231010 19:34:09.804"/>
+</kw>
+<status status="PASS" starttime="20231010 19:34:01.178" endtime="20231010 19:34:09.806"/>
+</test>
+<status status="PASS" starttime="20231010 19:34:01.162" endtime="20231010 19:34:09.806"/>
+</suite>
+<suite id="s1-s3" name="Test Recruitment" source="C:\Development\robot-scripts\orange-hrm-robot\Tests\test_recruitment.robot">
+<test id="s1-s3-t1" name="Validate if Recuirtment page is opened" line="6">
+<kw name="Open Recruitment page" library="RecuritmentPage">
+<kw name="Click On Dashboard Menu Item" library="Dashboard">
+<arg>${links_menu_css}</arg>
+<arg>Recruitment</arg>
+<msg timestamp="20231010 19:34:09.980" level="INFO">Clicking element 'xpath:(//ul[@class='oxd-main-menu']/li)[5]'.</msg>
+<status status="PASS" starttime="20231010 19:34:09.838" endtime="20231010 19:34:11.551"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${recruitment_h6_xpath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231010 19:34:12.166" level="INFO">Current page contains element 'xpath://h6[text()='Recruitment']'.</msg>
+<status status="PASS" starttime="20231010 19:34:11.551" endtime="20231010 19:34:12.166"/>
+</kw>
+<status status="PASS" starttime="20231010 19:34:09.838" endtime="20231010 19:34:12.166"/>
+</kw>
+<status status="PASS" starttime="20231010 19:34:09.838" endtime="20231010 19:34:12.166"/>
+</test>
+<status status="PASS" starttime="20231010 19:34:09.806" endtime="20231010 19:34:12.172"/>
+</suite>
+<status status="PASS" starttime="20231010 19:33:07.674" endtime="20231010 19:34:12.172"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Test Dashboard">Tests.Test Dashboard</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Test Login">Tests.Test Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Test Recruitment">Tests.Test Recruitment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
