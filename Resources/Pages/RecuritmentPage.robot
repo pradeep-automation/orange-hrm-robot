@@ -12,3 +12,4 @@ Open Recruitment page
     click on dashboard menu item        ${links_menu_css}       Recruitment
     page should contain element        ${recruitment_h6_xpath}
     should be true
+    create webdriver
